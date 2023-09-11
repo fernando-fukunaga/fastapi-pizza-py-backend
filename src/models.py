@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Union, List
 
 
-class Users(BaseModel):
+class User(BaseModel):
     username: str
     email: str
     password: str
 
 
-class Suppliers(BaseModel):
+class Supplier(BaseModel):
     name: str
     phone: str
     specialty: str
 
 
-class Supplies(BaseModel):
+class Supply(BaseModel):
     name: str
     amount: Union[str, int, float]
     observations: str = None
 
 
-class Receipts(BaseModel):
+class Receipt(BaseModel):
     products: List[str]
     supplier_id: str
     timestamp: str
