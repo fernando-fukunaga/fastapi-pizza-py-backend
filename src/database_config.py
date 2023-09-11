@@ -1,6 +1,5 @@
-from motor.motor_asyncio import AsyncIOMotorClient
-from odmantic import AIOEngine
+from pymongo import MongoClient
 
-client = AsyncIOMotorClient("mongodb://localhost:27017/")
-engine = AIOEngine(client=client,
-                   database="pizza_py")
+
+client = MongoClient("mongodb://localhost:27017/")
+database = client["pizza_py"]

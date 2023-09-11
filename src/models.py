@@ -1,27 +1,26 @@
-from odmantic import Model
+from pydantic import BaseModel
 from typing import Union, List
-from datetime import datetime
 
 
-class Users(Model):
+class Users(BaseModel):
     username: str
     email: str
     password: str
 
 
-class Suppliers(Model):
+class Suppliers(BaseModel):
     name: str
     phone: str
     specialty: str
 
 
-class Supplies(Model):
+class Supplies(BaseModel):
     name: str
     amount: Union[str, int, float]
     observations: str = None
 
 
-class Receipts(Model):
+class Receipts(BaseModel):
     products: List[str]
     supplier_id: str
     timestamp: str
