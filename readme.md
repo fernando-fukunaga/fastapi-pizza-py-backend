@@ -1,8 +1,8 @@
 <div align="center">
   <img src="images/logo_pizza_py.jpg" alt="" width=320>
-  <p><strong>pizza_py: Uma API para gerenciar estoque e suprimentos de pizzarias!!</strong></p>
+  <p><strong>pizza_py: An API for managing your pizzeria's stock and supplies!!</strong></p>
 
-  ![Static Badge](https://img.shields.io/badge/Status-Em%20desenvolvimento-orange)
+  ![Static Badge](https://img.shields.io/badge/Status-Under%20development-orange)
 </div>
 
-pizza_py é uma API REST, que está sendo desenvolvida por mim, em Python, usando o framework FastAPI e o banco de dados não-relacional MongoDB. O nome da aplicação é um trocadilho com "pizza pie" um tipo de pizza muito comum nos EUA que mais se parece com uma torta!
+pizza_py is a REST API, that's being developed by me, with Python, the FastAPI framework and the non-relational database MongoDB. It is destined to pizzeria owners who want to keep control of their stock, supply receipts, etc. The app's name is a joke with "pizza pie", a very common type of pizza in the USA.
