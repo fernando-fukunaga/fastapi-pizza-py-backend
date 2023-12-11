@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Union, List
+from typing import Union, Dict
 
 
 class User(BaseModel):
@@ -21,6 +21,6 @@ class Supply(BaseModel):
 
 
 class Receipt(BaseModel):
-    products: List[str]
+    products: Dict[str, Union[str, int, float]]
     supplier_id: str
     timestamp: str

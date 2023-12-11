@@ -188,6 +188,15 @@ def test_update_supplier_with_no_token_returns_401():
     assert response.status_code == 401
 
 
+def test_delete_supplier_by_name_that_exists_returns_204():
+    response = client.delete(
+        "/suppliers/testsupplier1",
+        headers=HEADERS
+    )
+
+    assert response.status_code == 204
+
+
 def test_delete_supplier_by_name_that_exists_with_no_admin_privilege_returns_403():
     response = client.delete(
         "/suppliers/testsupplier1",
@@ -230,12 +239,3 @@ def test_delete_supplier_with_no_token_returns_401():
     )
 
     assert response.status_code == 401
-
-
-def test_delete_supplier_by_name_that_exists_returns_204():
-    response = client.delete(
-        "/suppliers/testsupplier1",
-        headers=HEADERS
-    )
-
-    assert response.status_code == 204
