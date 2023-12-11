@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import src.suppliers_repository as suppliers_repository
+import src.repositories.suppliers_repository as suppliers_repository
 import src.models as models   
 
 app = FastAPI()

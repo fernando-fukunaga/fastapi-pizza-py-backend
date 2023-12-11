@@ -1,4 +1,4 @@
-from src.database_config import database
+from src.config.database_config import database
 import src.models as models
 from typing import List
 
