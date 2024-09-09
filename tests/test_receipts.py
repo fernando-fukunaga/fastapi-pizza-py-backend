@@ -111,7 +111,7 @@ def test_list_receipts_last_24_hours_filtering_by_supplier_correctly_returns_200
     assert response.status_code == 200
 
 
-def test_list_receipts_last_24_hours_filtering_by_nonexisting_supplier_returns_404():
+def test_list_receipts_last_24_hours_filtering_by_non_existing_supplier_returns_404():
     response = client.get(
         "/receipts/last-24-hours/testsupplier",
         headers=HEADERS
@@ -155,7 +155,7 @@ def test_list_receipts_last_week_filtering_by_supplier_correctly_returns_200():
     assert response.status_code == 200
 
 
-def test_list_receipts_last_week_filtering_by_nonexisting_supplier_returns_404():
+def test_list_receipts_last_week_filtering_by_non_existing_supplier_returns_404():
     response = client.get(
         "/receipts/last-week/testsupplier",
         headers=HEADERS
@@ -199,7 +199,7 @@ def test_list_receipts_last_month_filtering_by_supplier_correctly_returns_200():
     assert response.status_code == 200
 
 
-def test_list_receipts_last_month_filtering_by_nonexisting_supplier_returns_404():
+def test_list_receipts_last_month_filtering_by_non_existing_supplier_returns_404():
     response = client.get(
         "/receipts/last-month/testsupplier",
         headers=HEADERS
@@ -243,7 +243,7 @@ def test_list_receipts_last_year_filtering_by_supplier_correctly_returns_200():
     assert response.status_code == 200
 
 
-def test_list_receipts_last_year_filtering_by_nonexisting_supplier_returns_404():
+def test_list_receipts_last_year_filtering_by_non_existing_supplier_returns_404():
     response = client.get(
         "/receipts/last-year/testsupplier",
         headers=HEADERS
@@ -287,7 +287,7 @@ def test_list_receipts_older_than_a_year_filtering_by_supplier_correctly_returns
     assert response.status_code == 200
 
 
-def test_list_receipts_older_than_a_year_filtering_by_nonexisting_supplier_returns_404():
+def test_list_receipts_older_than_a_year_filtering_by_non_existing_supplier_returns_404():
     response = client.get(
         "/receipts/older-than-a-year/testsupplier",
         headers=HEADERS
@@ -322,7 +322,7 @@ def test_get_receipt_by_existing_id_returns_200():
     assert response.status_code == 200
 
 
-def test_get_receipt_by_nonexisting_id_returns_404():
+def test_get_receipt_by_non_existing_id_returns_404():
     response = client.get(
         "/receipts/idteste",
         headers=HEADERS
@@ -390,7 +390,7 @@ def test_update_receipt_correctly_with_no_admin_privilege_returns_403():
     assert response.status_code == 403
 
 
-def test_update_receipt_uncorrectly_returns_400():
+def test_update_receipt_incorrectly_returns_400():
     response = client.put(
         "/receipts/idteste",
         headers=HEADERS,
@@ -404,7 +404,7 @@ def test_update_receipt_uncorrectly_returns_400():
     assert response.status_code == 400
 
 
-def test_update_receipt_unorrectly_with_no_admin_privilege_returns_403():
+def test_update_receipt_incorrectly_with_no_admin_privilege_returns_403():
     response = client.put(
         "/receipts/idteste",
         headers=NO_ADM_HEADERS,
@@ -463,7 +463,7 @@ def test_delete_receipt_by_existing_id_with_no_admin_privilege_returns_403():
     assert response.status_code == 403
 
 
-def test_delete_receipt_by_nonexisting_id_returns_404():
+def test_delete_receipt_by_non_existing_id_returns_404():
     response = client.delete(
         "/receipts/idteste",
         headers=HEADERS
@@ -472,7 +472,7 @@ def test_delete_receipt_by_nonexisting_id_returns_404():
     assert response.status_code == 404
 
 
-def test_delete_receipt_by_nonexisting_id_with_no_admin_privilege_returns_403():
+def test_delete_receipt_by_non_existing_id_with_no_admin_privilege_returns_403():
     response = client.delete(
         "/receipts/idteste",
         headers=NO_ADM_HEADERS
